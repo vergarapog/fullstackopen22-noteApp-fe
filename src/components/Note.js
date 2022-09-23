@@ -5,8 +5,13 @@ const Note = ({ note, toggleImportance, handleDelete }) => {
 
   return (
     <li className={note.important ? "note important" : "note"}>
-      {note.content}{" "}
-      <button onClick={() => toggleImportance(note.id)}>{label}</button>
+      <span>{note.content} </span>
+      <button
+        onClick={() => toggleImportance(note.id)}
+        className="toggleImportance"
+      >
+        {label}
+      </button>
       <button onClick={() => handleDelete(note.id)}>delete</button>
     </li>
   )

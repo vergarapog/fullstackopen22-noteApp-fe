@@ -1,6 +1,7 @@
+/* eslint-disable indent */
 import { useState, useEffect, useRef } from "react"
 import notesService from "./services/notes"
-import loginService from "./services/login"
+
 import ErrorMessage from "./components/ErrorMessage"
 
 //components
@@ -88,7 +89,7 @@ const App = () => {
           })
         )
       })
-      .catch((error) => {
+      .catch(() => {
         setErrorMessage(
           `The note "${changedNote.content}" was not saved to the server`
         )

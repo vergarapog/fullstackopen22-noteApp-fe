@@ -6,7 +6,7 @@ const AllNotes = ({ notesToShow, toggleImportance, handleDelete }) => {
 
   useEffect(() => {
     let errorTimer = setTimeout(() => {
-      setLabel("Error. Please Refresh page.")
+      setLabel("Blog List Empty")
     }, 3000)
     return () => {
       clearTimeout(errorTimer)

@@ -11,15 +11,14 @@ const NoteForm = ({ createNote }) => {
     e.preventDefault()
     createNote({
       content: newNote,
-      date: new Date().toISOString(),
-      important: Math.random() < 0.5,
+      important: false,
     })
     setNewNote("")
   }
   return (
     <form onSubmit={addNote} style={{ marginTop: "3em" }}>
-      <label htmlFor="addNote">Add Note</label>
-      <input onChange={handleNewNote} id={addNote} value={newNote} />
+      <label htmlFor="noteInput">Add Note</label>
+      <input onChange={handleNewNote} id="noteInput" value={newNote} />
       <button type="submit">save</button>
     </form>
   )
